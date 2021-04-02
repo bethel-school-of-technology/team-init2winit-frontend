@@ -8,6 +8,9 @@ function login() {
 
     return (
         <div>
+            <h1>Java Share</h1>
+            <h3>Sign In</h3>
+            
             <Form>
                 <Form.Group controlId="formGroupEmail">
                     <Form.Label>Email address</Form.Label>
