@@ -18,3 +18,4 @@ this.props.mail
   </Route>
   );
 }
+export default SocialFollow;
