@@ -9,7 +9,6 @@ import css from './index.css';
 
 
 
-console.log("cottoncandy")
 ReactDOM.render(
   <React.StrictMode>
     <App />
