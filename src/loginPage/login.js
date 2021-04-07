@@ -1,43 +1,71 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Button, FormLabel, FormControl, FormGroup } from 'react-bootstrap';
 import './login.css';
+import axios from '../axios';
 
 
-function login() {
+function Login() {
+
+    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        if (!email || !username || !password) {
+            return alert('MISSING INFORMATION')
+        }
+        const user = {
+            email,
+            username,
+            password
+        };
+
+        console.log(user);
+
+        setEmail('');
+        setUsername('');
+        setPassword('');
+    }
 
     return (
         <div>
-            <h1>Java Share</h1><br/>
-            <h3>Sign In</h3><br/>
-            
+            <h1>Java Share</h1><br />
+            <h3>Sign In</h3><br />
             <Form>
-                <Form.Group controlId="formGroupEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
-                </Form.Group>
-                <FormControl>
-                <em>
-                
-                <form>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" placeholder="or enter a username" />
-                </form>
-                
-            </em>
-            </FormControl>
-                <Form.Group controlId="formGroupPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" required/>
-                </Form.Group>
-                <Button variant="primary" type="submit">
+                <FormGroup controlId="formGroupEmail">
+                    <FormLabel>Email address</FormLabel>
+                    <FormControl type="email"
+                        placeholder="Enter email"
+                        value={email}
+                        onChange={(e) => { setEmail(e.target.value) }} />
+                </FormGroup>
+                <FormGroup>
+                    <FormLabel>Username:</FormLabel>
+                    <FormControl
+                        type="text"
+                        placeholder="or enter a username"
+                        value={username}
+                        onChange={(e) => { setUsername(e.target.value) }} />
+
+                </FormGroup>
+                <FormGroup controlId="formGroupPassword">
+                    <FormLabel>Password</FormLabel>
+                    <FormControl
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => { setPassword(e.target.value) }} />
+                </FormGroup>
+                <Button variant="primary" type="submit" onClick={(e) => submitHandler(e)}>
                     Submit
                 </Button>
             </Form>
-            
+
         </div>
     )
 }
 
-export default login
+export default Login
 
