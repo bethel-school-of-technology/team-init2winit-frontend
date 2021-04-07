@@ -1,15 +1,15 @@
 
-import React, { useState } from 'react';
-import { FormControl } from 'react-bootstrap';
-import './loginPage.css';
+import React from 'react';
+import { Form, Button, FormLabel, FormControl, FormGroup } from 'react-bootstrap';
+import './login.css';
+
 
 function login() {
-    const [name, setName] = useState('John')
 
     return (
         <div>
-            <h1>Java Share</h1>
-            <h3>Sign In</h3>
+            <h1>Java Share</h1><br/>
+            <h3>Sign In</h3><br/>
             
             <Form>
                 <Form.Group controlId="formGroupEmail">
@@ -18,12 +18,12 @@ function login() {
                 </Form.Group>
                 <FormControl>
                 <em>
-                <HTMLBodyElement>
-                    <form>
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" placeholder="or enter a username" />
-                    </form>
-                </HTMLBodyElement>
+                
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="or enter a username" />
+                </form>
+                
             </em>
             </FormControl>
                 <Form.Group controlId="formGroupPassword">
