@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import './homePage.css';
-import Nav from '../nav/nav'
+import NavComponent from '../nav/NavComponent';
+import axios from '../axios';
 
-function homePage() {
+function HomePage() {
     return (
         <div>
-            <Nav/>
-            
-        
-        
+            <NavComponent />
         </div>
     );
 };
 
-export default homePage
+export default HomePage
