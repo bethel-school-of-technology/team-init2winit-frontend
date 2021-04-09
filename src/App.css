@@ -40,4 +40,9 @@
 .SocialFollow{
   background: #eee;
   padding: 25px 50px;
+  position: relative;
+  margin-bottom: justify;
+  max-height: fit-content;
+  resize: horizontal;
+
 }
