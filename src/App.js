@@ -1,24 +1,28 @@
 import './App.css';
-import Nav from './nav/nav';
-import Homepage from './homePage/homePage'
-import Login from './loginPage/login'
-import SocialFollow from './SocialFollow'
-
-
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Homepage from './homePage/HomePage';
+import Login from './loginPage/Login';
+import Signup from './signupPage/Signup';
 
 
 
 function App() {
 
-
-  
   return (
-    <div>
-      <Homepage/>
-      <SocialFollow></SocialFollow>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/' component={Homepage} />
+        <Route exact path='/login' component={Login} />
+        <Route exact path='/register' component={Signup} />
+      </Switch>
+
+
+    </Router>,
+ <SocialFollow></SocialFollow>
+ 
   )
 }
 
 export default App;
+
+     
