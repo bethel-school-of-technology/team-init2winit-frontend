@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Row, Col, Form, Button, Container, FormGroup } from 'react-bootstrap';
 import axios from '../axios';
 
-function Signup() {
+function Signup({ history }) {
 
     const [username, setUsername] = useState('');
     const [firstName, setFirstName] = useState('');
@@ -10,7 +10,13 @@ function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const submitHandler = (e) => {
+    useEffect(() => {
+        if (localStorage.getItem('authToken')) {
+            history.push('/');
+        }
+    }, [history]);
+
+    const submitHandler = async (e) => {
         e.preventDefault();
 
         if (!username || !firstName || !lastName || !email || !password) {
@@ -26,6 +32,22 @@ function Signup() {
         };
 
         console.log(newUser);
+
+        const config = {
+            header: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        try {
+            const { data } = await axios.post('/register', { username, firstName, lastName, email, password }, config);
+            console.log(data);
+            localStorage.setItem('authToken', data.token);
+
+            history.push('/');
+        } catch (error) {
+            console.log(error);
+        }
 
 
         setUsername('');
