@@ -5,27 +5,36 @@ import './login.css';
 import axios from '../axios';
 
 
-function Login() {
+function Login({ history }) {
 
     const [email, setEmail] = useState('');
-    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
-        if (!email || !username || !password) {
+        if (!email || !password) {
             return alert('MISSING INFORMATION')
         }
-        const user = {
-            email,
-            username,
-            password
+
+        const config = {
+            header: {
+                'Content-Type': 'application/json'
+            }
         };
 
-        console.log(user);
+        try {
+            const { data } = await axios.post('/login', { email, password }, config);
+
+            localStorage.setItem('authToken', data.token);
+
+            history.push('/');
+        } catch (error) {
+            console.log(error);
+        }
+
+
 
         setEmail('');
-        setUsername('');
         setPassword('');
     }
 
@@ -40,15 +49,6 @@ function Login() {
                         placeholder="Enter email"
                         value={email}
                         onChange={(e) => { setEmail(e.target.value) }} />
-                </FormGroup>
-                <FormGroup>
-                    <FormLabel>Username:</FormLabel>
-                    <FormControl
-                        type="text"
-                        placeholder="or enter a username"
-                        value={username}
-                        onChange={(e) => { setUsername(e.target.value) }} />
-
                 </FormGroup>
                 <FormGroup controlId="formGroupPassword">
                     <FormLabel>Password</FormLabel>
