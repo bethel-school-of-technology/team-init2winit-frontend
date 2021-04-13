@@ -1,18 +1,14 @@
 div {
-    background-color: darkslategray;
+    text-align: center;
+    
 }
 
-
-
 #email {
-    width: 30px;
-    justify-content: center;
+    max-width: 250px;
+    Margin: 0 auto;
 }
 
 #pass {
-    width: 30px;
-}
-
-#subButton {
-    width: 10px;
+    max-width: 250px;
+    margin: 0 auto;
 }
