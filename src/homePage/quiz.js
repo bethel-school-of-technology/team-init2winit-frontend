@@ -11,10 +11,11 @@ export default function Quiz() {
     })
     .then(function(data) {
       console.log(data);    
+    });
+
 }
 /* retrun to default App. js container withtin Homepage
 */
     
 
-};
     
