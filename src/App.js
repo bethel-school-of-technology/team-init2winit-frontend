@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Homepage from './homePage/HomePage';
+import Homepage from './homePage/Homepage';
 import Login from './loginPage/Login';
 import Signup from './signupPage/Signup';
 import PrivateRoute from './routing/PrivateRoute';
