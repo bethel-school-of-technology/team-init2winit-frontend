@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Col, Form, Button, Container, FormGroup } from 'react-bootstrap';
 import axios from '../axios';
+import './signup.css'
 
 function Signup({ history }) {
 

@@ -43,14 +43,14 @@ function Login({ history }) {
             <h1>Java Share</h1><br />
             <h3>Sign In</h3><br />
             <Form>
-                <FormGroup controlId="formGroupEmail">
+                <FormGroup id="email" controlId="formGroupEmail">
                     <FormLabel>Email address</FormLabel>
                     <FormControl type="email"
                         placeholder="Enter email"
                         value={email}
                         onChange={(e) => { setEmail(e.target.value) }} />
                 </FormGroup>
-                <FormGroup controlId="formGroupPassword">
+                <FormGroup id="pass" controlId="formGroupPassword">
                     <FormLabel>Password</FormLabel>
                     <FormControl
                         type="password"
@@ -58,7 +58,7 @@ function Login({ history }) {
                         value={password}
                         onChange={(e) => { setPassword(e.target.value) }} />
                 </FormGroup>
-                <Button variant="primary" type="submit" onClick={(e) => submitHandler(e)}>
+                <Button id="subButton" variant="primary" type="submit" onClick={(e) => submitHandler(e)}>
                     Submit
                 </Button>
             </Form>
