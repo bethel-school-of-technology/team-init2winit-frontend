@@ -1,9 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Homepage from './homePage/homePage';
-import Login from './loginPage/login';
-import Signup from './signupPage/signup';
+import Homepage from './homePage/HomePage';
+import Login from './loginPage/Login';
+import Signup from './signupPage/Signup';
 import PrivateRoute from './routing/PrivateRoute';
 
 
