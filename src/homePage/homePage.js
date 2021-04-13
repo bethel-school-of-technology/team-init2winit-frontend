@@ -40,8 +40,6 @@ function HomePage({ history }) {
         <div>
             <NavComponent />
             <div>{data}<button onClick={logoutHandler}>Logout</button></div>
-            <title>JavaShare</title>
-            <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"></meta>,
 
         </div>
 
