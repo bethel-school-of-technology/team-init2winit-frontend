@@ -1,3 +1,27 @@
 div {
     text-align: center;
 }
+
+#useName {
+    max-width: 300px;
+}
+
+#firstName {
+    max-width: 200px;
+}
+
+#lastName {
+    max-width: 200px;
+}
+
+#emailIn {
+    max-width: 300px;
+}
+
+#passIn {
+    max-width: 300px;
+}
+
+#subButton {
+    max-width: 150px;
+}

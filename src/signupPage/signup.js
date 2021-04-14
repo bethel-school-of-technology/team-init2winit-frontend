@@ -67,7 +67,7 @@ function Signup({ history }) {
                     <Row>
                         <Container>
                             <Row> <Col>Create a Username</Col>
-                                <Form.Control
+                                <Form.Control id="useName"
                                     placeholder="username"
                                     value={username}
                                     onChange={(e) => { setUsername(e.target.value) }} />
@@ -78,18 +78,18 @@ function Signup({ history }) {
                 </FormGroup>
                 <Row>
                     <Col>
-                        <Form.Control
+                        <Form.Control id="firstName"
                             placeholder="First name"
                             value={firstName}
                             onChange={(e) => { setFirstName(e.target.value) }} />
                     </Col>
                     <Col>
-                        <Form.Control placeholder="Last name"
+                        <Form.Control id="lastName" placeholder="Last name"
                             value={lastName}
                             onChange={(e) => { setLastName(e.target.value) }} />
                     </Col>
                 </Row>
-                <Form.Group as={Row} controlId="formHorizontalEmail">
+                <Form.Group id="emailIn" as={Row} controlId="formHorizontalEmail">
                     <Form.Label column sm={2}>
                         Email
                     </Form.Label>
@@ -102,7 +102,7 @@ function Signup({ history }) {
                     </Col>
                 </Form.Group>
 
-                <Form.Group as={Row} controlId="formHorizontalPassword">
+                <Form.Group id="passIn" as={Row} controlId="formHorizontalPassword">
                     <Form.Label column sm={2}>
                         Password
                     </Form.Label>
@@ -116,7 +116,7 @@ function Signup({ history }) {
                 </Form.Group>
                 <Form.Group as={Row}>
                     <Col sm={{ span: 10, offset: 2 }}>
-                        <Button type="submit" onClick={(e) => { submitHandler(e) }}>Sign up!</Button>
+                        <Button id="subButton" type="submit" onClick={(e) => { submitHandler(e) }}>Sign up!</Button>
                     </Col>
                 </Form.Group>
 
