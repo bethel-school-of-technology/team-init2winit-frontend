@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Form, Button, FormLabel, FormControl, FormGroup } from 'react-bootstrap';
 import './login.css';
 import axios from '../axios';
