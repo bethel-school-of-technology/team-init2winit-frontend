@@ -107,8 +107,61 @@ export default function Quiz() {
     .then(function(response) {
       return response.json();
     })
-    .then(function(data) {
-      console.log(data);    
+    .then(function({Quiz}) {
+      console.log({Cofee: "Connected to javaShare Coffee Model"});    
     });
   */
 }
+//insert api content
+
+  /*
+    fetch("http://localhost:5000/JavaShare/Coffee") 
+    .then(function(HomePage) {
+      return response.json();
+    })
+    .then(function(Homepage) {
+    App.HomePage.function(Quiz);    
+    });
+    fetch.Coffee()
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function({Quiz}) {
+      console.log({Cofee: "Connected to javaShare Coffee Model"});    
+    });
+    const Quiz = {
+      Coffee: {
+        Roast: "Coffee.Roast",
+        Flavor: "Coffee.Flavor",
+        Sugar: "Coffee.Sugar"
+      },
+      Dark: "Dark",
+      Robusto: "Robusto",
+      Light: "Light",
+      Medium: "Medium",
+      Caffeine: "Caffeine"
+    };
+    
+    let Quiz = quiz_data.Roast.Component;
+    
+    if (!Quiz) {
+      throw new Error("Quiz is not defined");
+    }
+    
+    switch (Quiz) {
+      case quiz_data.Coffee.Dark:
+      // Do something for Quiz coffee is Dark
+      case quiz_data.Coffee.Robusto:
+      // Do something 
+      case quiz_data.Light:
+      // This will work if Light generic
+      // Do something for Light (generic)
+      case quiz_data.Coffee.Medium:
+      //Do something for Sugar
+      case quiz_data.Coffee.Caffeine:
+    }
+    
+  
+  // Quiz coffee is Dark should display by default
+*/
+

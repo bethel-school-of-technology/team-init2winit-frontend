@@ -45,10 +45,10 @@ function HomePage({ history }) {
 
         </div>
 
-
-
+          
+      
     );
-
+ 
 };
 
 export default HomePage;
