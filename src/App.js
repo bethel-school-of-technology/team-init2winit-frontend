@@ -10,11 +10,11 @@ import Quiz from './homePage/Quiz';
 
 
 function App() {
-
+// Make private route.
   return (
-    <Router>
+    <Router> 
       <Switch>
-        <PrivateRoute exact path='/' component={Homepage} />
+        <Route exact path='/' component={Homepage} /> 
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Signup} />
         <Route exact path='/quiz' component={Quiz} /> 
