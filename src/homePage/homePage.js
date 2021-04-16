@@ -7,10 +7,11 @@ import axios from '../axios';
 function HomePage({ history }) {
     const [data, setData] = useState('');
 
-    useEffect(() => {
+   useEffect(() => {
+/*
         if (!localStorage.getItem('authToken')) {
             history.push('/login')
-        }
+        } */
 
         const fetchPrivateData = async () => {
             const config = {
@@ -22,7 +23,8 @@ function HomePage({ history }) {
 
             try {
                 const { data } = await axios.get('/', config);
-                setData(data.data);
+                setData(data);
+                console.log(data);
             } catch (error) {
                 localStorage.removeItem('authToken');
             }
@@ -43,10 +45,10 @@ function HomePage({ history }) {
 
         </div>
 
-
-
+          
+      
     );
-
+ 
 };
 
 export default HomePage;
