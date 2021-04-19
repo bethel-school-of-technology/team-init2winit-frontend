@@ -1,4 +1,7 @@
 #drinkJumbo {
     text-align: center;
     align-items: center;
+    border-radius: 25px;
+    border-style: solid;
+    box-shadow: 2px 2px;
 }
