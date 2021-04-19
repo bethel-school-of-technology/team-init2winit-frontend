@@ -7,7 +7,7 @@ function Generator() {
         <div>
             <h2>Your drink of choice is...</h2>
             <Jumbotron id="drinkJumbo">
-                <Spinner animation="border" role="status">
+                <Spinner animation="border" role="status" >
                     <span className="sr-only">Loading...</span>
                 </Spinner>
                 <h1>Insert/state beverage name</h1>
