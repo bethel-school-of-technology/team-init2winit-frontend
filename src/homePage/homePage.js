@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './homePage.css';
 import NavComponent from '../nav/NavComponent';
 import axios from '../axios';
+import Generator from '../Generator/Generator';
 
 
 function HomePage({ history }) {
@@ -58,10 +59,12 @@ function HomePage({ history }) {
 
 
             </div>
+            <Generator/>
             <button onClick={logoutHandler}>Logout</button></div>
-
+            
 
     );
+    
 
 };
 
