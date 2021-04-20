@@ -11,7 +11,6 @@ export default function Quiz() {
   const [caffeine, setCaffeine] = useState('');
   const [sugar, setSugar] = useState('');
   const [dairy, setDairy] = useState('');
-  const [data, setData] = useState('');
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -26,12 +25,15 @@ export default function Quiz() {
     const coffee = [strongFlat, caffeine, sugar, dairy];
     console.log(coffee)
 
+    const username = localStorage.getItem('username');
+
     try {
-      const { data } = await axios.post('/quiz', { coffee }, config);
-      setData(data);
+      const { data } = await axios.post('/quiz', { username, coffee }, config);
       console.log(data);
     } catch (error) {
       console.log(error);
+      localStorage.removeItem('authToken');
+      localStorage.removeItem('username');
     }
 
   }

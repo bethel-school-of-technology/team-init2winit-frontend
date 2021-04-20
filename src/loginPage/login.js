@@ -7,12 +7,12 @@ import axios from '../axios';
 
 function Login({ history }) {
 
-    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
     const submitHandler = async (e) => {
         e.preventDefault();
-        if (!email || !password) {
+        if (!username || !password) {
             return alert('MISSING INFORMATION')
         }
 
@@ -23,9 +23,10 @@ function Login({ history }) {
         };
 
         try {
-            const { data } = await axios.post('/login', { email, password }, config);
+            const { data } = await axios.post('/login', { username, password }, config);
 
             localStorage.setItem('authToken', data.token);
+            localStorage.setItem('username', username);
 
             history.push('/');
         } catch (error) {
@@ -34,7 +35,7 @@ function Login({ history }) {
 
 
 
-        setEmail('');
+        setUsername('');
         setPassword('');
     }
 
@@ -43,12 +44,12 @@ function Login({ history }) {
             <h1>Java Share</h1><br />
             <h3>Sign In</h3><br />
             <Form>
-                <FormGroup id="email" controlId="formGroupEmail">
-                    <FormLabel>Email address</FormLabel>
-                    <FormControl type="email"
-                        placeholder="Enter email"
-                        value={email}
-                        onChange={(e) => { setEmail(e.target.value) }} />
+                <FormGroup id="username" controlId="formGroupUsername">
+                    <FormLabel>Username</FormLabel>
+                    <FormControl type="text"
+                        placeholder="Enter username"
+                        value={username}
+                        onChange={(e) => { setUsername(e.target.value) }} />
                 </FormGroup>
                 <FormGroup id="pass" controlId="formGroupPassword">
                     <FormLabel>Password</FormLabel>
