@@ -44,6 +44,7 @@ function Signup({ history }) {
             const { data } = await axios.post('/register', { username, firstName, lastName, email, password }, config);
             console.log(data);
             localStorage.setItem('authToken', data.token);
+            localStorage.setItem('authToken', username);
 
             history.push('/');
         } catch (error) {
