@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Form, Button, FormLabel, FormControl, FormGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './login.css';
 import axios from '../axios';
 
@@ -63,7 +64,7 @@ function Login({ history }) {
                     Submit
                 </Button>
             </Form>
-
+            <p>Don't have an account?<Link to='/register'>Register</Link></p>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Col, Form, Button, Container, FormGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import axios from '../axios';
 import './signup.css'
 
@@ -122,7 +123,7 @@ function Signup({ history }) {
                 </Form.Group>
 
             </form>
-
+            <p>Already have an account?<Link to='/login'>Login</Link></p>
         </div>
     )
 }

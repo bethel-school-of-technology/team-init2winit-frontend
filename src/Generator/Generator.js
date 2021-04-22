@@ -1,10 +1,13 @@
 import React from 'react';
 import './generator.css';
-import { Jumbotron, Spinner,Button } from 'react-bootstrap';
+import { Jumbotron, Spinner, Button } from 'react-bootstrap';
+import NavComponent from '../nav/NavComponent';
 
 function Generator() {
     return (
+
         <div>
+            <NavComponent />
             <h2>Your drink of choice is...</h2>
             <Jumbotron id="drinkJumbo">
                 <Spinner animation="border" role="status" >
