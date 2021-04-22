@@ -15,7 +15,11 @@ function NavComponent() {
   return (
     <nav>
       <Navbar bg="dark" variant="dark" className="nav">
-        <Navbar.Brand href="/">(JavaShare Logo)</Navbar.Brand>
+        <Navbar.Brand >
+          <a>
+            <img src="coffee.png" alt="Java Share"/>
+          </a>
+        </Navbar.Brand>
         <Nav className="mr-auto" id="tabs">
           <Link to="/" className="nav-links">Home</Link>
           <Link to="/map" className="nav-links">Near You</Link>
