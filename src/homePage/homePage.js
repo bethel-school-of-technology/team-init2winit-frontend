@@ -39,13 +39,6 @@ function HomePage({ history }) {
         fetchPrivateData();
     }, [])
 
-
-    const logoutHandler = () => {
-        localStorage.removeItem('authToken');
-        localStorage.removeItem('username');
-        history.push('/login')
-    }
-
     return (
         <div>
             <NavComponent />
@@ -59,12 +52,12 @@ function HomePage({ history }) {
 
 
             </div>
-            <Generator/>
-            <button onClick={logoutHandler}>Logout</button></div>
-            
+            {/* <Generator/> */}
+        </div>
+
 
     );
-    
+
 
 };
 
