@@ -24,7 +24,7 @@ function NavComponent() {
         <Nav className="mr-auto" id="tabs">
           <Link to="/" className="nav-links">Home</Link>
           <Link to="/map" className="nav-links">Near You</Link>
-          <Link to="/generator" className="nav-links">Find A Cup</Link>
+          <Link to="/find" className="nav-links">Find A Cup</Link>
         </Nav>
         <Form inline>
           {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" /> */}
