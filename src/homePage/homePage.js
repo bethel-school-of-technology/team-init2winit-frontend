@@ -4,6 +4,7 @@ import NavComponent from '../nav/NavComponent';
 import axios from '../axios';
 import Generator from '../Generator/Generator';
 
+const username = localStorage.getItem('username');
 
 function HomePage({ history }) {
     const [data, setData] = useState([]);
@@ -13,7 +14,6 @@ function HomePage({ history }) {
                 if (!localStorage.getItem('authToken')) {
                     history.push('/login')
                 } */
-        const username = localStorage.getItem('username');
 
         const fetchPrivateData = async () => {
             const config = {
@@ -43,7 +43,8 @@ function HomePage({ history }) {
         <div>
             <NavComponent />
             <div className="container">
-                <h1>Your Preferences</h1>
+                <h1>Welcome {username}!</h1>
+                <h2>Your Preferences Are:</h2>
                 <div className="box">How Strong: {data[0]}</div>
                 <div className="box">How Much Caffeine:  {data[1]}</div>
                 <div className="box">How Much Sugar: {data[2]}</div>

@@ -2,6 +2,7 @@ import React from 'react'
 import './nav.css'
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, FormControl, Form, Button } from 'react-bootstrap';
+import CoffeLogo from './coffeelogo.png';
 
 
 function NavComponent() {
@@ -16,9 +17,9 @@ function NavComponent() {
     <nav>
       <Navbar bg="dark" variant="dark" className="nav">
         <Navbar.Brand >
-          <a>
-            <img src="coffee.png" alt="Java Share"/>
-          </a>
+          <Link to="/">
+            <img src={CoffeLogo} className="logo" alt="Java Share" />
+          </Link>
         </Navbar.Brand>
         <Nav className="mr-auto" id="tabs">
           <Link to="/" className="nav-links">Home</Link>
