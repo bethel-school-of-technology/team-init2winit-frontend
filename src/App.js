@@ -8,6 +8,7 @@ import PrivateRoute from './routing/PrivateRoute';
 import Quiz from './homePage/Quiz';
 import Generator from './Generator/Generator';
 import Googlemaps from './googlemaps/Googlemaps';
+import Find from './Generator/Find';
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route exact path='/register' component={Signup} />
         <Route exact path='/quiz' component={Quiz} />
         <Route exact path='/generator' component={Generator} />
+        <Route exact path='/find' component={Find} />
         <Route exact path='/map' component={Googlemaps} />
       </Switch>
     </Router>
