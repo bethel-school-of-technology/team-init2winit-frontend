@@ -14,12 +14,10 @@ export default function SocialFollow() {
   <a href="/Users/jamesbean/team-init2winit-frontend/public/photos/f_logo_RGB-Black_58.png" class="facebook"><i class="fa fa-facebook"></i></a> 
   <a href="/Users/jamesbean/team-init2winit-frontend/public/photos/Twitter.png" class="twitter"><i class="fa fa-twitter"></i></a> 
   <a href="/Users/jamesbean/team-init2winit-frontend/public/photos/glyph-logo_May2016-310x310.png" class="instagram"><i class="fa fa-instagram"></i></a>
- <button redirect = "mailto:codewinit@gmail.com"/>
-  </html> 
-</div>
+ <button redirect = "public/contact.html"/>
+ </html>
+ </div>
+</p>
 
-
-  
-  </p>
   );
 }
