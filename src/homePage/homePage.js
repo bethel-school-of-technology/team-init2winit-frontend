@@ -6,7 +6,7 @@ import Generator from '../Generator/Generator';
 
 const username = localStorage.getItem('username');
 
-function HomePage({ history }) {
+function HomePage() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -43,7 +43,7 @@ function HomePage({ history }) {
         <div>
             <NavComponent />
             <div className="container">
-                <h1>Welcome John! {username}</h1>
+                <h1>Welcome {username}!</h1>
                 <h2>Your Preferences Are:</h2>
                 <div className="box">How Strong: {data[0]}</div>
                 <div className="box">How Much Caffeine:  {data[1]}</div>

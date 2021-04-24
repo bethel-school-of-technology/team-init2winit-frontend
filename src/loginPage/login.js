@@ -6,7 +6,7 @@ import './login.css';
 import axios from '../axios';
 import CoffeeLogo from '../nav/coffeelogo.png';
 
-function Login({ history }) {
+function Login() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -29,7 +29,7 @@ function Login({ history }) {
             localStorage.setItem('authToken', data.token);
             localStorage.setItem('username', username);
 
-            history.push('/');
+            window.location = '/';
         } catch (error) {
             console.log(error);
         }
