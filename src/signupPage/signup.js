@@ -48,7 +48,7 @@ function Signup({ history }) {
             localStorage.setItem('authToken', data.token);
             localStorage.setItem('authToken', username);
 
-            history.push('/');
+            history.push('/quiz');
         } catch (error) {
             console.log(error);
         }
