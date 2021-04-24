@@ -4,7 +4,7 @@ import { Form, Button, FormLabel, FormControl, FormGroup } from 'react-bootstrap
 import { Link } from 'react-router-dom';
 import './login.css';
 import axios from '../axios';
-
+import CoffeeLogo from '../nav/coffeelogo.png';
 
 function Login({ history }) {
 
@@ -42,29 +42,28 @@ function Login({ history }) {
 
     return (
         <div>
-            <h1>Java Share</h1><br />
-            <h3>Sign In</h3><br />
+            <img src={CoffeeLogo} />
             <Form>
                 <FormGroup id="username" controlId="formGroupUsername">
-                    <FormLabel>Username</FormLabel>
+
                     <FormControl type="text"
-                        placeholder="Enter username"
+                        placeholder="Enter Username"
                         value={username}
                         onChange={(e) => { setUsername(e.target.value) }} />
                 </FormGroup>
                 <FormGroup id="pass" controlId="formGroupPassword">
-                    <FormLabel>Password</FormLabel>
+
                     <FormControl
                         type="password"
-                        placeholder="Password"
+                        placeholder="Enter Password"
                         value={password}
                         onChange={(e) => { setPassword(e.target.value) }} />
                 </FormGroup>
                 <Button id="subButton" variant="primary" type="submit" onClick={(e) => submitHandler(e)}>
-                    Submit
+                    Log In!
                 </Button>
             </Form>
-            <p>Don't have an account?<Link to='/register'>Register</Link></p>
+            <p className="text">Don't have an account?<Link to='/register'> Register</Link></p>
         </div>
     )
 }
