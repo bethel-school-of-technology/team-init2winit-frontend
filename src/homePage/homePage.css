@@ -7,10 +7,5 @@
     max-width: 700px;
     background-color: lightgrey;
     height: 250px;
-
-}
-
-Generator {
-    align-items: center;
-    text-align: center;
+    margin-top: 50px;
 }

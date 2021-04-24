@@ -80,7 +80,7 @@ function Generator() {
 
     timer();
 
-    const randomNumber = Math.floor(Math.random() * 5);
+    const randomNumber = Math.floor(Math.random() * 10);
     console.log(randomNumber)
     const coffee = data[randomNumber]
 

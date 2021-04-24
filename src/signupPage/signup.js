@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Row, Col, Form, Button, Container, FormGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from '../axios';
-import './signup.css'
+import './signup.css';
+import CoffeeLogo from '../nav/coffeelogo.png';
 
 function Signup({ history }) {
 
@@ -62,68 +63,51 @@ function Signup({ history }) {
 
     return (
         <div>
-            <h1>Java Share</h1>
-            <h3>Signup</h3>
-            <form>
-                <FormGroup>
-                    <Row>
-                        <Container>
-                            <Row> <Col>Create a Username</Col>
-                                <Form.Control id="useName"
-                                    placeholder="username"
-                                    value={username}
-                                    onChange={(e) => { setUsername(e.target.value) }} />
-                                <Col></Col>
-                            </Row>
-                        </Container>
-                    </Row>
-                </FormGroup>
-                <Row>
-                    <Col>
-                        <Form.Control id="firstName"
-                            placeholder="First name"
-                            value={firstName}
-                            onChange={(e) => { setFirstName(e.target.value) }} />
-                    </Col>
-                    <Col>
-                        <Form.Control id="lastName" placeholder="Last name"
-                            value={lastName}
-                            onChange={(e) => { setLastName(e.target.value) }} />
-                    </Col>
-                </Row>
-                <Form.Group id="emailIn" as={Row} controlId="formHorizontalEmail">
-                    <Form.Label column sm={2}>
-                        Email
-                    </Form.Label>
-                    <Col sm={10}>
-                        <Form.Control
-                            type="email"
-                            placeholder="Email"
-                            value={email}
-                            onChange={(e) => { setEmail(e.target.value) }} />
-                    </Col>
-                </Form.Group>
+            <img src={CoffeeLogo} />
 
-                <Form.Group id="passIn" as={Row} controlId="formHorizontalPassword">
-                    <Form.Label column sm={2}>
-                        Password
-                    </Form.Label>
-                    <Col sm={10}>
-                        <Form.Control
-                            type="password"
-                            placeholder="Password"
-                            value={password}
-                            onChange={(e) => { setPassword(e.target.value) }} />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row}>
-                    <Col sm={{ span: 10, offset: 2 }}>
-                        <Button id="subButton" type="submit" onClick={(e) => { submitHandler(e) }}>Sign up!</Button>
-                    </Col>
-                </Form.Group>
+            {/*<Container> */}
+            <FormGroup id="username">
+                <Form.Control id="username"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => { setUsername(e.target.value) }} />
+            </FormGroup>
 
-            </form>
-            <p>Already have an account?<Link to='/login'>Login</Link></p>
+            <FormGroup id="username" controlId="formGroupUsername">
+                <Form.Control id="firstName"
+                    placeholder="First name"
+                    value={firstName}
+                    onChange={(e) => { setFirstName(e.target.value) }} />
+            </FormGroup>
+
+            <FormGroup id="username" controlId="formGroupUsername">
+                <Form.Control id="lastName" placeholder="Last name"
+                    value={lastName}
+                    onChange={(e) => { setLastName(e.target.value) }} />
+            </FormGroup>
+
+            <FormGroup id="username" controlId="formGroupUsername">
+                <Form.Control
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => { setEmail(e.target.value) }} />
+            </FormGroup>
+
+
+            <FormGroup id="username" controlId="formGroupUsername">
+                <Form.Control
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => { setPassword(e.target.value) }} />
+            </FormGroup>
+
+            <Button id="subButton" type="submit" onClick={(e) => { submitHandler(e) }}>Register!</Button>
+
+            {/* </Container> */}
+
+            <p className="text">Already have an account?<Link to='/login'> Login</Link></p>
         </div>
     )
 }
