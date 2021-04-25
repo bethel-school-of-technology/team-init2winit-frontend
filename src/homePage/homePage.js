@@ -45,15 +45,15 @@ function HomePage() {
             <div className="container">
                 <h1>Welcome {username}!</h1>
                 <h2>Your Preferences Are:</h2>
-                <div className="box">How Strong: {data[0]}</div>
-                <div className="box">How Much Caffeine:  {data[1]}</div>
+                <div className="box">You like it: {data[0]}</div>
+                <div className="box">Caffeine level:  {data[1]}</div>
                 <div className="box">How Much Sugar: {data[2]}</div>
                 <div className="box">Dairy Preference:  {data[3]}</div>
 
 
 
             </div>
-            {/* <Generator/> */}
+
         </div>
 
 

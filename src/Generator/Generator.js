@@ -7,7 +7,11 @@ import NavComponent from '../nav/NavComponent';
 function Generator() {
 
     const [data, setData] = useState([]);
+    const [userData, setUserData] = useState([]);
     const [display, setDisplay] = useState(false);
+
+    const username = localStorage.getItem('username');
+    let randomNumber;
 
     useEffect(() => {
         /*
@@ -34,6 +38,28 @@ function Generator() {
             }
         }
         fetchPrivateData();
+        const getUserData = async () => {
+            const config = {
+                params: {
+                    username
+                },
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${localStorage.getItem('authToken')}`
+                }
+            }
+
+            try {
+                const { data } = await axios.get('/', config);
+                console.log(data);
+                setUserData(data);
+                console.log(userData);
+            } catch (error) {
+                localStorage.removeItem('authToken');
+                localStorage.removeItem('username');
+            }
+        }
+        getUserData();
     }, [])
 
 
@@ -50,8 +76,12 @@ function Generator() {
     }
 
     timer();
+    if (userData[0] === 'strong') {
+        randomNumber = Math.floor(Math.random() * 5);
+    } else {
+        randomNumber = Math.floor(Math.random() * 5) + 5;
+    }
 
-    const randomNumber = Math.floor(Math.random() * 5);
     console.log(randomNumber)
     const coffee = data[randomNumber]
 
