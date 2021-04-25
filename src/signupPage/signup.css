@@ -1,6 +1,17 @@
+
 div {
     text-align: center;
 }
+    div:first-child{
+        display: none;
+        @media(max-width: 700px){
+            display: block;
+            font-weight: 300;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    }
+
+
 
 #subButton {
     max-width: 150px;
