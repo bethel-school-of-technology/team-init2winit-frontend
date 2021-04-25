@@ -1,4 +1,8 @@
-.container {
+input {
+    align-items: left;
+}
+
+#jumboQuiz {
     text-align: center;
     align-items: center;
     border-radius: 25px;
@@ -6,6 +10,9 @@
     box-shadow: 2px 2px;
     max-width: 700px;
     background-color: lightgrey;
-    height: 250px;
-    margin-top: 50px;
+    margin: 40px auto;
+}
+
+div {
+    align-items: center;
 }

@@ -1,18 +1,19 @@
 
 import React, { useState } from 'react';
 import { Form, Button, FormLabel, FormControl, FormGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './login.css';
 import axios from '../axios';
+import CoffeeLogo from '../nav/coffeelogo.png';
 
+function Login() {
 
-function Login({ history }) {
-
-    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
     const submitHandler = async (e) => {
         e.preventDefault();
-        if (!email || !password) {
+        if (!username || !password) {
             return alert('MISSING INFORMATION')
         }
 
@@ -23,46 +24,46 @@ function Login({ history }) {
         };
 
         try {
-            const { data } = await axios.post('/login', { email, password }, config);
+            const { data } = await axios.post('/login', { username, password }, config);
 
             localStorage.setItem('authToken', data.token);
+            localStorage.setItem('username', username);
 
-            history.push('/');
+            window.location = '/';
         } catch (error) {
             console.log(error);
         }
 
 
 
-        setEmail('');
+        setUsername('');
         setPassword('');
     }
 
     return (
         <div>
-            <h1>Java Share</h1><br />
-            <h3>Sign In</h3><br />
+            <img src={CoffeeLogo} />
             <Form>
-                <FormGroup id="email" controlId="formGroupEmail">
-                    <FormLabel>Email address</FormLabel>
-                    <FormControl type="email"
-                        placeholder="Enter email"
-                        value={email}
-                        onChange={(e) => { setEmail(e.target.value) }} />
+                <FormGroup id="username" controlId="formGroupUsername">
+
+                    <FormControl type="text"
+                        placeholder="Enter Username"
+                        value={username}
+                        onChange={(e) => { setUsername(e.target.value) }} />
                 </FormGroup>
                 <FormGroup id="pass" controlId="formGroupPassword">
-                    <FormLabel>Password</FormLabel>
+
                     <FormControl
                         type="password"
-                        placeholder="Password"
+                        placeholder="Enter Password"
                         value={password}
                         onChange={(e) => { setPassword(e.target.value) }} />
                 </FormGroup>
                 <Button id="subButton" variant="primary" type="submit" onClick={(e) => submitHandler(e)}>
-                    Submit
+                    Log In!
                 </Button>
             </Form>
-
+            <p className="text">Don't have an account?<Link to='/register'> Register</Link></p>
         </div>
     )
 }

@@ -1,5 +1,22 @@
 #tabs {
     font-weight: 300;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
+
+
+.nav-links {
+    color: white;
+    margin: 0 10px;
+}
+
+.nav-links:hover {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
