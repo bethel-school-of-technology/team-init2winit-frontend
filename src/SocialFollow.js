@@ -1,5 +1,6 @@
 import React from "react";
 import reactDom from "react-dom";
+import HomePage from "./homePage/HomePage";
 
 
 
@@ -21,3 +22,15 @@ export default function SocialFollow() {
 
     );
   }
+  class HomePage extends React.Component {
+    render() {
+      return (
+        <div>
+        <h1>Home Page</h1>
+        <SocialFollow />
+        </div>
+      );
+    }
+  }
+  
+  ReactDOM.render(< HomePage/>, document.getElementById('root'));
