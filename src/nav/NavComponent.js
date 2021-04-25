@@ -25,9 +25,9 @@ function NavComponent() {
           <Link to="/" className="nav-links">Home</Link>
           <Link to="/map" className="nav-links">Near You</Link>
           <Link to="/find" className="nav-links">Find A Cup</Link>
+          <Link to="/share" className="nav-links">Share</Link>
         </Nav>
         <Form inline>
-          {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" /> */}
           <Button onClick={logoutHandler} variant="outline-info">Logout</Button>
         </Form>
       </Navbar>

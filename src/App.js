@@ -9,6 +9,8 @@ import Quiz from './homePage/Quiz';
 import Generator from './Generator/Generator';
 import Googlemaps from './googlemaps/Googlemaps';
 import Find from './Generator/Find';
+import SharePage from './SharePage/SharePage';
+import ShareAdd from './SharePage/ShareAdd';
 
 
 
@@ -24,6 +26,8 @@ function App() {
         <Route exact path='/generator' component={Generator} />
         <Route exact path='/find' component={Find} />
         <Route exact path='/map' component={Googlemaps} />
+        <Route exact path='/share' component={SharePage} />
+        <Route exact path='/share-add' component={ShareAdd} />
       </Switch>
     </Router>
   )

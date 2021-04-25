@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col, Form, Button, Container, FormGroup } from 'react-bootstrap';
+import { Form, Button, FormGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from '../axios';
 import './signup.css';
@@ -63,7 +63,7 @@ function Signup({ history }) {
 
     return (
         <div>
-            <img src={CoffeeLogo} />
+            <img className="signup-image" src={CoffeeLogo} />
 
             {/*<Container> */}
             <FormGroup id="username">
@@ -107,7 +107,7 @@ function Signup({ history }) {
 
             {/* </Container> */}
 
-            <p className="text">Already have an account?<Link to='/login'> Login</Link></p>
+            <p className="reg-text">Already have an account?<Link to='/login'> Login</Link></p>
         </div>
     )
 }

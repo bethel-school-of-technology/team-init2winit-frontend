@@ -42,7 +42,7 @@ function Login() {
 
     return (
         <div>
-            <img src={CoffeeLogo} />
+            <img className="login-image" src={CoffeeLogo} />
             <Form>
                 <FormGroup id="username" controlId="formGroupUsername">
 
@@ -63,7 +63,7 @@ function Login() {
                     Log In!
                 </Button>
             </Form>
-            <p className="text">Don't have an account?<Link to='/register'> Register</Link></p>
+            <p className="reg-text">Don't have an account?<Link to='/register'> Register</Link></p>
         </div>
     )
 }
