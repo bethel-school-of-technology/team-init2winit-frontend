@@ -1,0 +1,45 @@
+.share-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border-radius: 25px;
+    border-style: solid;
+    box-shadow: 2px 2px;
+    max-width: 70%;
+    background-color: lightgrey;
+    height: 80vh;
+    margin: 20px auto;
+    padding: 30px;
+}
+
+.messages {
+    flex: 0.99;
+}
+
+.message {
+   display: flex;
+   margin-bottom: 40px;
+}
+
+.message .left img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.message .left h4 {
+    margin: 0;
+}
+
+.message .right {
+    margin-left: 20px;
+}
+
+.message .right span {
+    font-size: 14px;
+}
+
+.add-share-container {
+    margin-top: 80px;
+}
