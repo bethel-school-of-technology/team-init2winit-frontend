@@ -1,16 +1,6 @@
-div{display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 10px;
-    width: 100%;
-    background: navy;
-    position: fixed;
-    z-index: 9;
-    font-weight: 300;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    @media(max-width: 700px){
-        bottom:  0;
-    }
+
+div {
+    text-align: center;
 }
     div:first-child{
         display: none;
@@ -22,9 +12,6 @@ div{display: flex;
     }
 
 
-div {
-    text-align: center;
-}
 
 #useName {
     max-width: 300px;
