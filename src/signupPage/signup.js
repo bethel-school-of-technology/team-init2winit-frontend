@@ -73,20 +73,20 @@ function Signup({ history }) {
                     onChange={(e) => { setUsername(e.target.value) }} />
             </FormGroup>
 
-            <FormGroup id="username" controlId="formGroupUsername">
+            <FormGroup id="username">
                 <Form.Control id="firstName"
                     placeholder="First name"
                     value={firstName}
                     onChange={(e) => { setFirstName(e.target.value) }} />
             </FormGroup>
 
-            <FormGroup id="username" controlId="formGroupUsername">
+            <FormGroup id="username">
                 <Form.Control id="lastName" placeholder="Last name"
                     value={lastName}
                     onChange={(e) => { setLastName(e.target.value) }} />
             </FormGroup>
 
-            <FormGroup id="username" controlId="formGroupUsername">
+            <FormGroup id="username">
                 <Form.Control
                     type="email"
                     placeholder="Email"
@@ -95,7 +95,7 @@ function Signup({ history }) {
             </FormGroup>
 
 
-            <FormGroup id="username" controlId="formGroupUsername">
+            <FormGroup id="username">
                 <Form.Control
                     type="password"
                     placeholder="Password"

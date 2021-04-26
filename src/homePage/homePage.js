@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './homePage.css';
 import NavComponent from '../nav/NavComponent';
+import { Link } from 'react-router-dom';
 import axios from '../axios';
-import Generator from '../Generator/Generator';
+import { Button } from 'react-bootstrap';
 
 const username = localStorage.getItem('username');
 
@@ -45,13 +46,11 @@ function HomePage() {
             <div className="container">
                 <h1>Welcome {username}!</h1>
                 <h2>Your Preferences Are:</h2>
-                <div className="box">You like it: {data[0]}</div>
-                <div className="box">Caffeine level:  {data[1]}</div>
-                <div className="box">How Much Sugar: {data[2]}</div>
-                <div className="box">Dairy Preference:  {data[3]}</div>
-
-
-
+                <div >You like it: {data[0]}</div>
+                <div >Caffeine level:  {data[1]}</div>
+                <div >How Much Sugar: {data[2]}</div>
+                <div >Dairy Preference:  {data[3]}</div>
+                <Link to='/quiz'><Button className="update-btn">Update Preferences</Button></Link>
             </div>
 
         </div>

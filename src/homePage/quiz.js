@@ -46,57 +46,57 @@ export default function Quiz() {
           <Form>
           <h3 id="darkness">How strong do you like your coffee?</h3>
 
-          <input id='strong' name="strongFlat" type="radio" onClick={(e) => setStrongFlat(e.target.id)} />
-          <label htmlFor='strong'>Strong</label>
+          <input id='Strong' name="strongFlat" type="radio" onClick={(e) => setStrongFlat(e.target.id)} />
+          <label htmlFor='Strong'>Strong</label>
           <br></br>
-          <input id='flat' name="strongFlat" type="radio" onClick={(e) => setStrongFlat(e.target.id)} />
-          <label htmlFor='flat'>Flat</label>
+          <input id='Flat' name="strongFlat" type="radio" onClick={(e) => setStrongFlat(e.target.id)} />
+          <label htmlFor='Flat'>Flat</label>
           <br></br>
 
           <h3>How much caffeine do you like?</h3>
 
 
-          <input id='expresso' name="expresso" type="radio" onClick={(e) => setCaffeine(e.target.id)} />
-          <label htmlFor='expresso'>Espresso</label>
+          <input id='Expresso' name="expresso" type="radio" onClick={(e) => setCaffeine(e.target.id)} />
+          <label htmlFor='Expresso'>Espresso</label>
           <br></br>
 
-          <input id='decaf' name="expresso" type="radio" onClick={(e) => setCaffeine(e.target.id)} />
-          <label htmlFor='decaf'>Decaf</label>
+          <input id='Decaf' name="decaf" type="radio" onClick={(e) => setCaffeine(e.target.id)} />
+          <label htmlFor='Decaf'>Decaf</label>
           <br></br>
 
           <h3>How much sugar can you handle?</h3>
 
 
-          <input id='sugNon' name="sugar" type="radio" onClick={(e) => setSugar(e.target.id)} />
-          <label htmlFor='sugNon'>None</label>
+          <input id='None' name="sugar" type="radio" onClick={(e) => setSugar(e.target.id)} />
+          <label htmlFor='None'>None</label>
           <br></br>
 
 
-          <input id='sugNorm' name="sugar" type="radio" onClick={(e) => setSugar(e.target.id)} />
-          <label htmlFor='sugNorm'>Standard</label>
+          <input id='Normal' name="sugar" type="radio" onClick={(e) => setSugar(e.target.id)} />
+          <label htmlFor='Normal'>Standard</label>
           <br></br>
 
-          <input id='sugMuch' name="sugar" type="radio" onClick={(e) => setSugar(e.target.id)} />
-          <label htmlFor='sugMuch'>As much as I can legally have</label>
+          <input id='A lot' name="sugar" type="radio" onClick={(e) => setSugar(e.target.id)} />
+          <label htmlFor='A lot'>As much as I can legally have</label>
           <br></br>
 
           <h3>Do you have a dairy preference?</h3>
 
-          <input id='dairyNone' name="dairy" type="radio" onClick={(e) => setDairy(e.target.id)} />
-          <label htmlFor='dairyNone'>None</label><br></br>
+          <input id='NoDairy' name="dairy" type="radio" onClick={(e) => setDairy(e.target.id)} />
+          <label htmlFor='NoDairy'>None</label><br></br>
 
 
-          <input id='dairyNormal' name="dairy" type="radio" onClick={(e) => setDairy(e.target.id)} />
-          <label for='dairyNormal'>Normal</label><br></br>
+          <input id='Standard' name="dairy" type="radio" onClick={(e) => setDairy(e.target.id)} />
+          <label htmlFor='Standard'>Standard</label><br></br>
 
-          <input id='dairyNonfat' name="dairy" type="radio" onClick={(e) => setDairy(e.target.id)} />
-          <label for='dairyNonfat'>Non Fat</label><br></br>
+          <input id='Nonfat' name="dairy" type="radio" onClick={(e) => setDairy(e.target.id)} />
+          <label htmlFor='Nonfat'>Non Fat</label><br></br>
 
-          <input id='dairyAlmond' name="dairy" type="radio" onClick={(e) => setDairy(e.target.id)} />
-          <label for='dairyAlmond'>Almond</label><br></br>
+          <input id='Almond' name="dairy" type="radio" onClick={(e) => setDairy(e.target.id)} />
+          <label htmlFor='Almond'>Almond</label><br></br>
 
-          <input id='dairySoy' name="dairy" type="radio" onClick={(e) => setDairy(e.target.id)} />
-          <label for='dairySoy'>Soy</label><br></br>
+          <input id='Soy' name="dairy" type="radio" onClick={(e) => setDairy(e.target.id)} />
+          <label htmlFor='Soy'>Soy</label><br></br>
 
           <Button id="subButton" variant="primary" type="submit" onClick={(e) => submitHandler(e)}>
             Submit

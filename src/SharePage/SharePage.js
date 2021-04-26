@@ -45,19 +45,19 @@ function SharePage() {
                     {data.map((message) => {
                         return <div className="message">
                             <div className="left">
-                                <h4>{message.name}</h4>
+                                <h3>{message.name}</h3>
                                 <img src={message.image} />
 
                             </div>
                             <div className="right">
-                                <h3>{message.user}<span> 3:55PM</span></h3>
+                                <h3>{message.user}<span> {message.time}</span></h3>
                                 <p>{message.desc}</p>
                             </div>
                         </div>
                     })}
                 </div>
                 <div className="share-btn">
-                    <Link to="/share-add"><Button>Share</Button></Link>
+                    <Link to="/share-add"><Button>Share Now!</Button></Link>
                 </div>
 
             </div>
