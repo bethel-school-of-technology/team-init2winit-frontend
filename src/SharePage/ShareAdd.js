@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import NavComponent from '../nav/NavComponent'
 import { Form, Button, FormGroup } from 'react-bootstrap';
 import axios from '../axios';
+import date from 'date-and-time';
 
 function ShareAdd({ history }) {
     const [name, setName] = useState('');
@@ -16,12 +17,15 @@ function ShareAdd({ history }) {
         }
 
         const user = localStorage.getItem('username');
+        const now = new Date();
+        const time = date.format(now, 'h:mm A');
 
         const newMessage = {
             name,
             desc,
             image,
-            user
+            user,
+            time
         };
 
         console.log(newMessage);
@@ -34,7 +38,7 @@ function ShareAdd({ history }) {
         }
 
         try {
-            const { data } = await axios.post('/share', { name, desc, image, user }, config);
+            const { data } = await axios.post('/share', { name, desc, image, user, time }, config);
             console.log(data);
 
             history.push('/share');

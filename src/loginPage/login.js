@@ -44,14 +44,14 @@ function Login() {
         <div>
             <img className="login-image" src={CoffeeLogo} />
             <Form>
-                <FormGroup id="username" controlId="formGroupUsername">
+                <FormGroup id="username">
 
                     <FormControl type="text"
                         placeholder="Enter Username"
                         value={username}
                         onChange={(e) => { setUsername(e.target.value) }} />
                 </FormGroup>
-                <FormGroup id="pass" controlId="formGroupPassword">
+                <FormGroup id="pass">
 
                     <FormControl
                         type="password"

@@ -16,3 +16,7 @@ input {
 div {
     align-items: center;
 }
+
+#jumboQuiz label {
+    margin-left: 3px;
+}
