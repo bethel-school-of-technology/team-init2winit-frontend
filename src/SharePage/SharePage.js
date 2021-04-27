@@ -45,7 +45,7 @@ function SharePage() {
                     {data.map((message) => {
                         return <div className="message">
                             <div className="left">
-                                <h3>{message.name}</h3>
+                                <h4>{message.name}</h4>
                                 <img src={message.image} />
 
                             </div>

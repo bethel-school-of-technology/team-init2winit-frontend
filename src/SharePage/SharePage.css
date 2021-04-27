@@ -32,8 +32,9 @@
     object-fit: cover;
     border-radius: 5px;
 }
-.message .left h3 {
-    margin: 5px;
+.message .left h4 {
+    max-width: 150px;
+    margin-bottom: 5px;
 }
 
 .message .right {

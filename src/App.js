@@ -15,19 +15,18 @@ import ShareAdd from './SharePage/ShareAdd';
 
 
 function App() {
-  // Make private route.
   return (
     <Router>
       <Switch>
-        <Route exact path='/' component={Homepage} />
+        <PrivateRoute exact path='/' component={Homepage} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Signup} />
-        <Route exact path='/quiz' component={Quiz} />
-        <Route exact path='/generator' component={Generator} />
-        <Route exact path='/find' component={Find} />
-        <Route exact path='/map' component={Googlemaps} />
-        <Route exact path='/share' component={SharePage} />
-        <Route exact path='/share-add' component={ShareAdd} />
+        <PrivateRoute exact path='/quiz' component={Quiz} />
+        <PrivateRoute exact path='/generator' component={Generator} />
+        <PrivateRoute exact path='/find' component={Find} />
+        <PrivateRoute exact path='/map' component={Googlemaps} />
+        <PrivateRoute exact path='/share' component={SharePage} />
+        <PrivateRoute exact path='/share-add' component={ShareAdd} />
       </Switch>
     </Router>
   )
